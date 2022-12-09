@@ -1,5 +1,13 @@
 # DAP-Project
 
+_Stock Database 0_91_
+This Jupyter notebook contains code for
+- extract stock data from AlphaVantage
+- clean stock data
+- transform with new returns, stdev, volume and range data
+- create databases, create tables in postgres for the clean data or for the transformed data and upload it
+- do automated tests on statistics for tweets used for events studies and graph data tweets
+
 _Finance_Data_Example_0_1.ipynb_
 
 This Google Colab Jupyter Python workbook contains code showing
