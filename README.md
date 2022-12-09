@@ -1,6 +1,6 @@
 # DAP-Project
 
-_Stock Database 0_91_
+_Stock Database _
 This Jupyter notebook contains code for
 - extract stock data from AlphaVantage
 - clean stock data
