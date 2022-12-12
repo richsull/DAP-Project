@@ -6,3 +6,10 @@ praw
 requests
 snscrape.modules.twitter
 json
+textblob
+worcloud
+matplotlib
+sqlalchemy
+re
+csv
+scipy
