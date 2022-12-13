@@ -13,3 +13,8 @@ sqlalchemy
 re
 csv
 scipy
+seaborn
+nltk
+Ipython
+pprint
+vaderSentiment
