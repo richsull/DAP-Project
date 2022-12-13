@@ -652,12 +652,12 @@ def events_tests_graphs(tweet_datetime, input_df):
     p = input_df['close'][pre_start:post_end].dropna().plot(title=TICKER + " " + str(post_start.date()))
     # p.yaxis.set_major_formatter(mtick.PercentFormatter(xmax=1))
     p.xaxis.set_major_formatter(mdates.DateFormatter('%H:%M'))
-
     plt.axvline(x=tweet_datetime, color='r', label='tweet')
-
     plt.axhline(y=0, linewidth=0.25, color='black')
     p.legend()
+    # plt.savefig(f'close {tweet_datetime}.png')
     plt.show()
+
 
     # Graph 2 - returns_30 mins
     p = input_df['returns_30min'][pre_start:post_end].dropna().plot(title=TICKER + " " + str(post_start.date()))
@@ -666,7 +666,9 @@ def events_tests_graphs(tweet_datetime, input_df):
     plt.axvline(x=tweet_datetime, color='r', label='tweet')
     plt.axhline(y=0, linewidth=0.25, color='black')
     p.legend()
+    # plt.savefig(f"returns_30min{tweet_datetime}.png")
     plt.show()
+
 
     # Graph 3 - stdev_30 mins
     p = input_df['stdev_30min'][pre_start:post_end].dropna().plot(title=TICKER + " " + str(post_start.date()))
@@ -676,7 +678,9 @@ def events_tests_graphs(tweet_datetime, input_df):
     plt.axvline(x=tweet_datetime, color='r', label='tweet')
     plt.axhline(y=0, linewidth=0.25, color='black')
     p.legend()
+    # plt.savefig(f"stdev_30min {tweet_datetime}.png")
     plt.show()
+
 
     # Graph 4 - range_30 mins
     p = input_df['range_30min'][pre_start:post_end].dropna().plot(title=TICKER + " " + str(post_start.date()))
@@ -685,7 +689,9 @@ def events_tests_graphs(tweet_datetime, input_df):
     plt.axvline(x=tweet_datetime, color='r', label='tweet')
     plt.axhline(y=0, linewidth=0.25, color='black')
     p.legend()
+    # plt.savefig(f"range_30min{tweet_datetime}.png")
     plt.show()
+
 
     # Graph 5 - volume_30 mins
     p = input_df['volume_30min'][pre_start:post_end].dropna().plot(title=TICKER + " " + str(post_start.date()))
@@ -694,7 +700,9 @@ def events_tests_graphs(tweet_datetime, input_df):
     plt.axvline(x=tweet_datetime, color='r', label='tweet')
     plt.axhline(y=0, linewidth=0.25, color='black')
     p.legend()
+    # plt.savefig(f"volume_30min {tweet_datetime}.png")
     plt.show()
+
 
 
 ### 13 May 2022 05:44

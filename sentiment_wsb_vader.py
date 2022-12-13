@@ -319,7 +319,7 @@ zposts = zposts['Comment']
 z = round( (zposts.shape[0] / wsb_df.shape[0]) *100, 1)
 print("{}% neutral sentiment".format(z))
 
-print("test")
+
 # Create a bar chart of sentiments
 
 # show the value counts

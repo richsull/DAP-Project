@@ -23,7 +23,8 @@ import matplotlib.pyplot as plt
 plt.style.use("fivethirtyeight")
 import psycopg2
 from sqlalchemy import create_engine
-
+import matplotlib.dates as mdates
+from matplotlib.dates import DateFormatter
 print("Start of SentAlys_MuskTweets script...")
 
 
@@ -50,7 +51,7 @@ engine = create_engine(f'postgresql://{username}:{password1}@{host1}:5432/{datab
 
 query="SELECT * FROM tweets "
 tweets_df = pd.read_sql(query, engine)
-print(tweets_df.head())
+# print(tweets_df.head())
 print(len(tweets_df))
 
 # Create two separate functions to check the subjectivity and polarity of the text in a given tweet.
@@ -153,7 +154,7 @@ plt.show()
 #tweets_df.plot(x = 'datetime', y = 'Polarity', ax=ax)
 ax = plt.gca()
 plt.title('Polarity of comments over time')
-plt.xlabel('Date')
+ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
 plt.ylabel('Polarity')
 tweets_df.plot(x = 'datetime', y = 'Polarity', ax=ax)
 plt.gcf().autofmt_xdate()

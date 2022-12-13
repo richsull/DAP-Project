@@ -28,6 +28,7 @@ plt.style.use("fivethirtyeight")
 from sqlalchemy import create_engine
 
 # Download vader lexicon if needed
+print("Start of sentiment_tweet_vader script")
 
 nltk.download('vader_lexicon')
 
@@ -62,7 +63,7 @@ engine = create_engine(f'postgresql://{username}:{password1}@{host1}:5432/{datab
 query="SELECT * FROM tweets"
 tweets_df = pd.read_sql(query, engine)
 tweets_df = tweets_df.drop(['index'], axis=1)
-print(tweets_df.head())
+#print(tweets_df.head())
 
 """
 Calculate Sentiment for All Rows in a CSV
