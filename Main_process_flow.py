@@ -7,7 +7,7 @@ import glob,os
 import datetime
 
 
-os.chdir(r"C:\Users\mark1\PycharmProjects\pythonProject1")  # locate ourselves in the directory
+os.chdir(r"YOUR-DIRECTORY")  # locate ourselves in the directory
 print("Begin workflow.")
 print("Sit back and have a cup of tea, this process can take approximately 40 minutes to run")
 
